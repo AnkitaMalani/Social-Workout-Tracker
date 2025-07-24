@@ -17,6 +17,8 @@ const AuthContextProvider = ({ children }) => {
       localStorage.removeItem('userId');
       deleteCookie('userId');
       deleteCookie('token');
+      setIsAuthenticated(false);
+      setUser(null);
       toast.success('Hope to see you soon.');
     } catch (error) {
       toast.error(error.message || 'Trouble signing out, please try again');
