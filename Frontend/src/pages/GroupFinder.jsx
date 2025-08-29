@@ -531,7 +531,7 @@ const GroupFinder = () => {
     <>
       {/* Main GroupFinder View */}
       {!selectedActivity && !managingActivity ? (
-        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-10 w-full max-w-md mx-auto">
+        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-10 w-full">
           <div className="p-6">
             <div className="flex items-center">
               {/* <button onClick={handleGoBack} className="btn text-lg bg-gray-500 border-none text-white">
@@ -550,7 +550,7 @@ const GroupFinder = () => {
                   {myActivities.map(activity => (
                     <div
                       key={activity._id}
-                      className="p-3 border border-[#F2AB40] rounded-2xl max-w-md mx-auto flex flex-col overflow-hidden bg-gradient-to-br from-[#F2AB40]/20 to-[#e09b2d]/10"
+                      className="p-3 border border-[#F2AB40] rounded-2xl flex flex-col overflow-hidden bg-gradient-to-br from-[#F2AB40]/20 to-[#e09b2d]/10"
                     >
                       <div className="flex items-center">
                         <UserAvatar
@@ -1166,7 +1166,7 @@ const GroupFinder = () => {
         </div>
       ) : (
         /* Full-Screen Activity Details Modal */
-        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 p-2 w-full max-w-md mx-auto overflow-y-auto">
+        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 p-2 w-full overflow-y-auto">
           <div className="bg-[#121212] rounded-lg shadow-xl m-4">
             {/* Header with close button */}
             <div className="flex items-center mb-6">
@@ -1174,7 +1174,7 @@ const GroupFinder = () => {
                 onClick={handleCloseDetails}
                 className="text-gray-400 hover:text-[#F2AB40] text-2xl transition-colors"
               >
-                ✕
+                Back
               </button>
               <h1 className="flex-1 text-center font-bold text-2xl">Activity Details</h1>
               <div className="w-12" />

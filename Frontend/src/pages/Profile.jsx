@@ -110,7 +110,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 w-full max-w-md mx-auto">
+    <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 w-full">
       <div className="p-6">
         <div className="flex flex-col relative items-center justify-center text-center mb-8">
           {/* Camera icon bottom-right */}

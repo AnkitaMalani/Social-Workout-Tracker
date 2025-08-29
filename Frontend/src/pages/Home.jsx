@@ -256,30 +256,40 @@ function Home() {
           backgroundImage: "url('/start-bg8.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+          width: '100vw'
         }}
-        className="bg-[#121212] text-white fixed inset-0 "
+        className="text-white fixed inset-0 "
       >
-        <div className="flex flex-col justify-center items-center w-full h-screen gap-y-80">
-          <div>
-            <p className="font-semibold text-xl text-center">Welcome to</p>
-            <h1 className="text-4xl font-semibold mb-5">Workout Tracker</h1>
+        <div className="flex flex-col justify-between items-center w-full h-full px-4 py-10 sm:py-16">
+          <div className="text-center mt-8 sm:mt-0">
+            <p className="font-semibold text-lg sm:text-xl">Welcome to</p>
+            <h1 className="text-3xl sm:text-4xl font-semibold mb-5">Workout Tracker</h1>
           </div>
-          <div>
-            <div className="flex flex-col gap-4 w-full max-w-sm">
+          
+            <div className="flex flex-col gap-4 w-full max-w-sm mb-8">
               <button
-                className="bg-[#F2AB40] text-black px-6 py-3 text-lg rounded-lg hover:bg-[#e09b2d] transition-colors font-semibold"
+                className="bg-[#F2AB40] text-black 
+                   px-6 py-3 text-base 
+                   sm:px-8 sm:py-3 sm:text-lg 
+                   md:px-6 md:py-2 md:text-base 
+                   rounded-lg hover:bg-[#e09b2d] transition-colors font-semibold w-full"
                 onClick={GoToSignUp}
               >
                 Sign Up
               </button>
               <button
-                className="bg-gradient-to-br from-[#2a2a2a] to-[#1e1e1e] text-white px-6 py-3 text-lg rounded-lg hover:border-[#F2AB40] border border-gray-600 transition-all font-semibold"
+                className="bg-gradient-to-br from-[#2a2a2a] to-[#1e1e1e] 
+                   text-white px-6 py-3 text-base 
+                   sm:px-8 sm:py-3 sm:text-lg 
+                   md:px-6 md:py-2 md:text-base 
+                   rounded-lg hover:border-[#F2AB40] border border-gray-600 transition-all font-semibold"
                 onClick={GoToSignIn}
               >
                 Sign In
               </button>
-            </div>
+            
             <h2 className="mt-5 mb-5 font-semibold text-xl">Plan It. Share It. Sweat Together.</h2>
           </div>
         </div>
@@ -288,8 +298,10 @@ function Home() {
   }
 
   return (
-    <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 w-full max-w-md mx-auto">
-      <div className="p-8 pb-1">
+    <div className="bg-[#121212] text-white min-h-screen w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="pt-safe pb-5">
+          <div className="p-4 md:p-8 pb-1">
         {/* Enhanced Greeting Section */}
         <div className="flex flex-col items-center justify-center text-center">
           <div className="relative mb-4">
@@ -318,7 +330,7 @@ function Home() {
       </div>
 
       {/* Pinned Plans Section */}
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <h3 className="text-2xl font-semibold mb-4">My Pinned Plans</h3>
 
         {plansLoading ? (
@@ -328,8 +340,8 @@ function Home() {
             </div>
           </div>
         ) : plans.length > 0 ? (
-          <div className="space-y-4">
-            {plans.slice(0, 3).map(plan => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {plans.slice(0, 8).map(plan => {
               const hasExercises = plan.exercise && plan.exercise.length > 0;
               let exerciseList = 'No exercises';
 
@@ -736,6 +748,8 @@ function Home() {
           </div>
         </div>
       )}
+        </div>
+      </div>
     </div>
   );
 }

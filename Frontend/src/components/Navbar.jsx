@@ -11,15 +11,15 @@ function Navbar() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#2e3a50] border-t border-gray-700 pb-2">
-      <div className="px-4 py-3">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#2e3a50] border-t border-gray-700">
+      <div className="px-4 py-2 md:py-0.5">
         <div className="flex justify-around items-center max-w-md mx-auto">
           {/* Home */}
           <button
             onClick={() => navigate('/')}
             className="flex flex-col items-center justify-center pt-1 pb-3 px-3 rounded-xl"
           >
-            <img src={currentPath === '/' ? '/HomeON.png' : '/HomeOFF.png'} alt="Home" className="w-6 h-6 mb-1" />
+            <img src={currentPath === '/' ? '/HomeON.png' : '/HomeOFF.png'} alt="Home" className="w-6 h-6 mb-1 md:w-5 md:h-5 lg:w-4 lg:h-4" />
             <span className={`text-xs ${currentPath === '/' ? 'text-white' : 'text-gray-400'}`}>Home</span>
           </button>
 
@@ -31,7 +31,7 @@ function Navbar() {
             <img
               src={currentPath.startsWith('/plans') ? '/PlansON.png' : '/PlansOFF.png'}
               alt="Plans"
-              className="w-6 h-6 mb-1"
+              className="w-6 h-6 mb-1 md:w-5 md:h-5 lg:w-4 lg:h-4"
             />
             <span className={`text-xs ${currentPath.startsWith('/plans') ? 'text-white' : 'text-gray-400'}`}>
               Plans
@@ -46,7 +46,7 @@ function Navbar() {
             <img
               src={currentPath.startsWith('/groupfinder') ? '/GroupON.png' : '/GroupOFF.png'}
               alt="Groups"
-              className="w-8 h-8 -mb-1 object-contain"
+              className="w-8 h-8 -mb-1 object-contain md:w-6 md:h-6 lg:w-5 lg:h-5"
             />
             <span className={`text-xs ${currentPath.startsWith('/groupfinder') ? 'text-white' : 'text-gray-400'}`}>
               Groups
@@ -58,7 +58,7 @@ function Navbar() {
             <img
               src={currentPath.startsWith('/profile') ? '/ProfileON.png' : '/ProfileOFF.png'}
               alt="Profile"
-              className="w-6 h-6 mb-1"
+              className="w-6 h-6 mb-1 md:w-5 md:h-5 lg:w-4 lg:h-4"
             />
             <span className={`text-xs ${currentPath.startsWith('/profile') ? 'text-white' : 'text-gray-400'}`}>
               Profile

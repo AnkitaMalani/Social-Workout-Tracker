@@ -217,7 +217,7 @@ const Plans = () => {
     <>
       {/* Main Plans View */}
       {!selectedPlan && !selectedRecommendedPlan && !selectedPlanDetails ? (
-        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 w-full max-w-md mx-auto">
+        <div className="bg-[#121212] text-white min-h-screen pt-safe pb-5 w-full">
           <div className="p-6 pb-2">
             {/* Enhanced Header Section */}
             <div className="flex flex-col items-center justify-center text-center">
